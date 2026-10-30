@@ -1,5 +1,3 @@
-package Main;
-
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.Reader;
@@ -17,7 +15,7 @@ public class main {
 	    int position = 0;
 	    int mistake = 0;
 	    int correct = 0;
-	    float accuracy = 0;
+		float accuracy;
 	    
 	    System.out.println("Enter the following");
 	    System.out.println(test);
@@ -25,7 +23,7 @@ public class main {
 	    while (position < test.length()) {
 	    	int value = type.read();
 	    		
-	    	if (value == -1) {
+	    	if (value == -1) {		// breaks so that 
 	    		break;
 	    	}
 	    	
@@ -42,8 +40,7 @@ public class main {
 	    
 	    if (correct - mistake <= 0) {
 	    	accuracy = 0;
-	    } else 
-		    accuracy = ((float) correct / (correct + mistake)) * 100;
+	    } else 	accuracy = ((float) correct / (correct + mistake)) * 100;
 	    		    
 	    System.out.println("Well done!");
 	    System.out.println("Correct: " + correct);
